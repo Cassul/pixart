@@ -23,8 +23,14 @@ while (i <= 100) {
   i++;
 }
 // task 4
+// $('body').click(function (event) {
+//    if ($(event.target).attr('class')  === "square") {
+//     $(event.target).css('background-color', 'green');
+//   }
+// });
+// task 5
 $('body').click(function (event) {
    if ($(event.target).attr('class')  === "square") {
-    $(event.target).css('background-color', 'green');
+    $(event.target).css('background-color', $input.val());
   }
 });
