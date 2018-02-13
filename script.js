@@ -51,7 +51,7 @@ $('#myform :checkbox').change(function() {
 });
     } else {
         var options = {
-    url: `http://www.omdbapi.com/?t=#{$input.val()}&apikey=2f6435d9`,
+    url: `http://www.omdbapi.com/?t=${$input.val()}&apikey=2f6435d9`,
     type: "GET"
   };
   $.ajax(options).done(function (res) {
