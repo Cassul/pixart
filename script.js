@@ -45,9 +45,9 @@ $('#myform :checkbox').change(function() {
     // this will contain a reference to the checkbox   
     if ($('#1').is(':checked')) {
       $('body').on('mouseover', function (event) {
-   if ($(event.target).attr('class')  === "square") {
-    $(event.target).css('background-color', $input.val());
-  }
+        if ($(event.target).attr('class')  === "square") {
+        $(event.target).css('background-color', $input.val());
+      }
 });
     } else {
         var options = {
@@ -57,8 +57,8 @@ $('#myform :checkbox').change(function() {
     $.ajax(options).done(function (res) {
     $('body').on('mouseover', function (event) {
       if ($(event.target).attr('class')  === "square") {
-        $(event.target).css('background-image', res.Poster);
-        console.log(res);
+        $(event.target).css('background-image', 'url(' + res.Poster + ')');
+        console.log(res.Poster);
       }  
     });
 });
