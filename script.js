@@ -35,8 +35,27 @@ while (i <= 100) {
 //   }
 // });
 // task 6
-$('body').on('mouseover', function (event) {
+// $('body').on('mouseover', function (event) {
+//    if ($(event.target).attr('class')  === "square") {
+//     $(event.target).css('background-color', $input.val());
+//   }
+// });
+// task 7
+$('#myform :checkbox').change(function() {
+    // this will contain a reference to the checkbox   
+    if ($('#1').is(':checked')) {
+      $('body').on('mouseover', function (event) {
    if ($(event.target).attr('class')  === "square") {
     $(event.target).css('background-color', $input.val());
   }
+});
+    } else {
+        var options = {
+    url: `"http://www.omdbapi.com/?t=#{$input.val()}&apikey=2f6435d9"`,
+    type: "GET"
+  };
+  $.ajax(options).done(function (res) {
+    $container.append(main);
+  });
+    }
 });
