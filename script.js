@@ -55,6 +55,7 @@ $('#myform :checkbox').change(function() {
     type: "GET"
   };
   $.ajax(options).done(function (res) {
+    console.log(res)
     $container.append(main);
   });
     }
