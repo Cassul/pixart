@@ -54,8 +54,12 @@ $('#myform :checkbox').change(function() {
     url: `http://www.omdbapi.com/?t=${$input.val()}&apikey=2f6435d9`,
     type: "GET"
   };
-  $.ajax(options).done(function (res) {
-    console.log(res)
-  });
-    }
+    $.ajax(options).done(function (res) {
+    $('body').on('mouseover', function (event) {
+      if ($(event.target).attr('class')  === "square") {
+        $(event.target).css('background-image', $input.val());
+      }  
+    });
+});
+}
 });
