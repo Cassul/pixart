@@ -57,7 +57,8 @@ $('#myform :checkbox').change(function() {
     $.ajax(options).done(function (res) {
     $('body').on('mouseover', function (event) {
       if ($(event.target).attr('class')  === "square") {
-        $(event.target).css('background-image', $input.val());
+        $(event.target).css('background-image', res.Poster);
+        console.log(res);
       }  
     });
 });
