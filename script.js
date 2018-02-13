@@ -29,7 +29,13 @@ while (i <= 100) {
 //   }
 // });
 // task 5
-$('body').click(function (event) {
+// $('body').click(function (event) {
+//    if ($(event.target).attr('class')  === "square") {
+//     $(event.target).css('background-color', $input.val());
+//   }
+// });
+// task 6
+$('body').on('mouseover', function (event) {
    if ($(event.target).attr('class')  === "square") {
     $(event.target).css('background-color', $input.val());
   }
